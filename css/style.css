@@ -1,0 +1,306 @@
+
+/* =========================
+   1. GLOBAL SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0B0D12;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   2. NAVIGATION BAR
+========================= */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(11, 13, 18, 0.9);
+    border-bottom: 1px solid #252B38;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #8B5CF6;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #A0A7B4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #8B5CF6;
+}
+
+
+/* =========================
+   3. HERO SECTION
+========================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px 60px;
+}
+
+.greeting {
+    color: #8B5CF6;
+    letter-spacing: 4px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 7vw, 72px);
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #8B5CF6;
+}
+
+.hero h2 {
+    color: #A0A7B4;
+    font-size: clamp(18px, 3vw, 26px);
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    max-width: 650px;
+    color: #A0A7B4;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   4. BUTTONS
+========================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.primary-btn {
+    background-color: #8B5CF6;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #7041D8;
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    border: 1px solid #8B5CF6;
+    color: white;
+}
+
+.secondary-btn:hover {
+    background-color: #8B5CF6;
+}
+
+
+/* =========================
+   5. GENERAL SECTIONS
+========================= */
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 20px;
+    min-height: 300px;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #8B5CF6;
+}
+
+.section p {
+    color: #A0A7B4;
+}
+
+
+/* =========================
+   6. FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #252B38;
+    color: #A0A7B4;
+}
+
+
+/* =========================
+   7. RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding-top: 160px;
+    }
+
+    .section {
+        padding: 70px 20px;
+    }
+
+}
+
+/* =========================
+   THEME TOGGLE
+========================= */
+
+.theme-toggle,
+.menu-toggle {
+    background: transparent;
+    border: 1px solid #252B38;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.theme-toggle:hover,
+.menu-toggle:hover {
+    border-color: #8B5CF6;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+/* =========================
+   LIGHT THEME
+========================= */
+
+body.light-theme {
+    background-color: #F5F6FA;
+    color: #171923;
+}
+
+body.light-theme header {
+    background-color: rgba(245, 246, 250, 0.95);
+    border-color: #DCE0E8;
+}
+
+body.light-theme .nav-links a,
+body.light-theme .hero h2,
+body.light-theme .hero-description,
+body.light-theme .section p,
+body.light-theme footer {
+    color: #555D6D;
+}
+
+body.light-theme .secondary-btn {
+    color: #171923;
+}
+
+body.light-theme .theme-toggle,
+body.light-theme .menu-toggle {
+    color: #171923;
+    border-color: #DCE0E8;
+}
+
+body.light-theme footer {
+    border-color: #DCE0E8;
+}
+
+
+/* =========================
+   MOBILE NAVIGATION
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .theme-toggle {
+        margin-left: auto;
+    }
+
+}
