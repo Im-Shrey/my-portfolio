@@ -665,3 +665,87 @@ body.light-theme .project-links a {
         grid-template-columns: 1fr;
     }
 }
+
+/* Resume Section */
+
+.resume-description {
+    color: #A0A7B4;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.resume-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+/* Light Theme */
+
+body.light-theme .resume-description {
+    color: #555B6E;
+}
+
+/* Mobile Layout */
+
+@media (max-width: 600px) {
+    .resume-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Professional Footer */
+
+.footer {
+    background-color: #121620;
+    border-top: 1px solid #252B38;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer p {
+    color: #A0A7B4;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #A78BFA;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #C4B5FD;
+}
+
+body.light-theme .footer {
+    background-color: #FFFFFF;
+    border-color: #DCE0E8;
+}
+
+body.light-theme .footer p {
+    color: #555B6E;
+}
+
+body.light-theme .footer-links a {
+    color: #7C3AED;
+}
+
+@media (max-width: 600px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
